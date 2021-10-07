@@ -25,7 +25,7 @@ namespace Flappy_Birds
             InitializeComponent();
         }
 
-        private void gameTimeEvent(object sender, EventArgs e)
+        private void GameTimeEvent(object sender, EventArgs e)
         {
             flappyBird.Top += gravity;
             pipeBottom.Left -= pipeSpeed;
@@ -47,7 +47,7 @@ namespace Flappy_Birds
                 flappyBird.Bounds.IntersectsWith(ground.Bounds) || flappyBird.Top < -20
                 )
             {
-                endGame();
+                EndGame();
             }
 
             if (score > 3)
@@ -82,7 +82,7 @@ namespace Flappy_Birds
                 pipeSpeed = 65;                  
         }
 
-        private void gamekeyisdown(object sender, KeyEventArgs e)
+        private void Gamekeyisdown(object sender, KeyEventArgs e)
         {
 
             if (e.KeyCode == Keys.Space)
@@ -96,18 +96,21 @@ namespace Flappy_Birds
             }
         } 
 
-        private void gamekeyisup(object sender, KeyEventArgs e)
+        private void Gamekeyisup(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Space)
             {
                 gravity = 10;
             }
         }
-        private void endGame()
+        private void EndGame()
         {
             gameTimer.Stop();
             scoreText.Text += " Game Over!";
             
+            
         }
+
+
     }
 }

@@ -97,14 +97,14 @@ namespace Flappy_Birds
             // 
             this.gameTimer.Enabled = true;
             this.gameTimer.Interval = 20;
-            this.gameTimer.Tick += new System.EventHandler(this.gameTimeEvent);
+            this.gameTimer.Tick += new System.EventHandler(this.GameTimeEvent);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aqua;
-            this.ClientSize = new System.Drawing.Size(617, 601);
+            this.ClientSize = new System.Drawing.Size(620, 593);
             this.Controls.Add(this.scoreText);
             this.Controls.Add(this.flappyBird);
             this.Controls.Add(this.pipeBottom);
@@ -112,8 +112,8 @@ namespace Flappy_Birds
             this.Controls.Add(this.ground);
             this.Name = "Form1";
             this.Text = "Flappy Birds";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gamekeyisdown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gamekeyisup);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Gamekeyisdown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Gamekeyisup);
             ((System.ComponentModel.ISupportInitialize)(this.flappyBird)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeTop)).EndInit();
