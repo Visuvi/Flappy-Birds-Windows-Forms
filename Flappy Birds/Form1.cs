@@ -50,22 +50,36 @@ namespace Flappy_Birds
                 endGame();
             }
 
-            if (score > 5)
+            if (score > 3)
             {
-                pipeSpeed = 15;    
+                pipeSpeed = 14;    
             }
-            if (score > 10)
+            if (score > 9)
             {
-                pipeSpeed = 22;
+                pipeSpeed = 21;
             }
-            if (score > 20)
+            if (score > 15)
             {
-                pipeSpeed = 30;
+                pipeSpeed = 28;
             }
-            if (score > 30)
+            if (score > 22)
             {
-                pipeSpeed = 40;
+                pipeSpeed = 35;
             }
+            if (score > 29)
+            {
+                pipeSpeed = 42;
+            }
+            if (score > 36)
+            {
+                pipeSpeed = 49;
+            }
+            if (score > 43)
+            {
+                pipeSpeed = 56;
+            }
+            if (score > 55)
+                pipeSpeed = 65;                  
         }
 
         private void gamekeyisdown(object sender, KeyEventArgs e)
@@ -75,7 +89,12 @@ namespace Flappy_Birds
             {
                 gravity = -10;
             }
-        }
+            if (e.KeyCode == Keys.R)
+            {
+                Application.Restart();
+               
+            }
+        } 
 
         private void gamekeyisup(object sender, KeyEventArgs e)
         {

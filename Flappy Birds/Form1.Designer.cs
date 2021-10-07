@@ -77,7 +77,7 @@ namespace Flappy_Birds
             this.pipeBottom.Image = global::Flappy_Birds.Properties.Resources.pipe;
             this.pipeBottom.Location = new System.Drawing.Point(313, 325);
             this.pipeBottom.Name = "pipeBottom";
-            this.pipeBottom.Size = new System.Drawing.Size(65, 169);
+            this.pipeBottom.Size = new System.Drawing.Size(69, 169);
             this.pipeBottom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pipeBottom.TabIndex = 3;
             this.pipeBottom.TabStop = false;
@@ -87,7 +87,7 @@ namespace Flappy_Birds
             this.scoreText.AutoSize = true;
             this.scoreText.BackColor = System.Drawing.Color.Bisque;
             this.scoreText.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreText.Location = new System.Drawing.Point(122, 544);
+            this.scoreText.Location = new System.Drawing.Point(170, 540);
             this.scoreText.Name = "scoreText";
             this.scoreText.Size = new System.Drawing.Size(129, 34);
             this.scoreText.TabIndex = 4;
