@@ -106,7 +106,7 @@ namespace Flappy_Birds
         private void endGame()
         {
             gameTimer.Stop();
-            scoreText.Text += " Game Over!";
+            scoreText.Text += " Game Overeeeeee!";
             
         }
     }
