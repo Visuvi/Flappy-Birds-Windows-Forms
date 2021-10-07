@@ -16,6 +16,8 @@ namespace Flappy_Birds
         int pipeSpeed = 7;
         int gravity = 10;
         int score = 0;
+        int scoreSpeed = 3;
+       
         
 
 
@@ -47,39 +49,15 @@ namespace Flappy_Birds
                 flappyBird.Bounds.IntersectsWith(ground.Bounds) || flappyBird.Top < -20
                 )
             {
-                EndGame();
+                EndGame(endGamePic);
             }
 
-            if (score > 3)
+            if (score > scoreSpeed)
             {
-                pipeSpeed = 14;    
+                pipeSpeed = pipeSpeed + 7;
+                scoreSpeed = scoreSpeed + 6;
             }
-            if (score > 9)
-            {
-                pipeSpeed = 21;
-            }
-            if (score > 15)
-            {
-                pipeSpeed = 28;
-            }
-            if (score > 22)
-            {
-                pipeSpeed = 35;
-            }
-            if (score > 29)
-            {
-                pipeSpeed = 42;
-            }
-            if (score > 36)
-            {
-                pipeSpeed = 49;
-            }
-            if (score > 43)
-            {
-                pipeSpeed = 56;
-            }
-            if (score > 55)
-                pipeSpeed = 65;                  
+                
         }
 
         private void Gamekeyisdown(object sender, KeyEventArgs e)
@@ -103,12 +81,12 @@ namespace Flappy_Birds
                 gravity = 10;
             }
         }
-        private void EndGame()
+        private void EndGame(PictureBox pictureBox)
         {
             gameTimer.Stop();
             scoreText.Text += " Game Over!";
-            
-            
+            pictureBox.Show();
+
         }
 
 

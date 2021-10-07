@@ -36,10 +36,12 @@ namespace Flappy_Birds
             this.pipeBottom = new System.Windows.Forms.PictureBox();
             this.scoreText = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.endGamePic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.flappyBird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeBottom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endGamePic)).BeginInit();
             this.SuspendLayout();
             // 
             // flappyBird
@@ -99,12 +101,24 @@ namespace Flappy_Birds
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.GameTimeEvent);
             // 
+            // endGamePic
+            // 
+            this.endGamePic.Image = global::Flappy_Birds.Properties.Resources.scary;
+            this.endGamePic.Location = new System.Drawing.Point(-7, -28);
+            this.endGamePic.Name = "endGamePic";
+            this.endGamePic.Size = new System.Drawing.Size(631, 639);
+            this.endGamePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.endGamePic.TabIndex = 5;
+            this.endGamePic.TabStop = false;
+            this.endGamePic.Hide();
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(620, 593);
+            this.Controls.Add(this.endGamePic);
             this.Controls.Add(this.scoreText);
             this.Controls.Add(this.flappyBird);
             this.Controls.Add(this.pipeBottom);
@@ -118,6 +132,7 @@ namespace Flappy_Birds
             ((System.ComponentModel.ISupportInitialize)(this.ground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeTop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeBottom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endGamePic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,6 +146,7 @@ namespace Flappy_Birds
         private System.Windows.Forms.PictureBox pipeBottom;
         private System.Windows.Forms.Label scoreText;
         private System.Windows.Forms.Timer gameTimer;
+        public System.Windows.Forms.PictureBox endGamePic;
     }
 }
 
